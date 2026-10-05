@@ -5,28 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form html</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form action="/submit" method="post">
+    <form action="/submit" method="POST">
         <fieldset>
-            <legend>user details</legend>
-            <label for="name">name</label>
-            <input type="text" id="name" required value="enter name" name="name">
-            <label for="age">age</label>
-            <input type="range" id="age" min="1" max="120" value="20" name="age">
+            <legend>Personal Information</legend>
+
+
+            <label for="fullName">full name:</label>
+            <input type="text" autocomplete="name" id="fullName" id="fullName" minlength="2" required>
+            </br>
+            <label for="email">email:</label>
+            <input type="email" autocomplete="email" id="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" size="30"
+                required>
+            </br>
+            <label for="Phone">Phone:</label>
+            <input type="tel" autocomplete="tel" id="Phone" pattern="^0[2348957]\d{7}$">
+
         </fieldset>
-<fieldset>
-            <legend>more</legend>
-            <label for="gender">מגדר</label>
-            <select name="gender">
-                <option value="M">male</option>
-                <option value="F">female</option>
-                <option value="E">else</option>
+        <fieldset>
+            <legend>Ticket & Workshops</legend>
+
+            <label for="ticketType">Ticket type:</label>
+            <select name="ticketType" id="ticketType" required>
+                <option value="VIP">VIP</option>
+                <option value="Student">Student</option>
+                <option value="Standard">Standard</option>
             </select>
-   </fieldset> 
-        <input type="submit" value="sent">
- </form>
+            </br>
+            </br>
+            <label>Workshops:</label>
+            </br>
+            <input type="checkbox" name="Workshops" id="WebPerformance">
+            <label for="WebPerformance">Web Performance</label>
+            <input type="checkbox" name="Workshops" id="Accessibility">
+            <label for="Accessibility">Accessibility</label>
+            <input type="checkbox" name="Workshops" id="Testing">
+            <label for="Testing">Testing</label>
+            </br>
+
+            <label>Diet:</label>
+            </br>
+            <input type="radio" name="Diet" id="None" required>
+            <label for="None">None</label>
+            <input type="radio" name="Diet" id="Vegan">
+            <label for="Vegan">Vegan</label>
+            <input type="radio" name="Diet" id="Kosher">
+            <label for="Kosher">Kosher</label>
+            <input type="radio" name="Diet" id=" Halal">
+            <label for="Halal">Halal</label>
+            <input type="radio" name="Diet" id=" Other">
+            <label for="Other">Other</label>
+
+        </fieldset>
+        <fieldset>
+            <legend>Payment Details</legend>
+
+            <label for="cardNumber">card Number:</label>
+            <input type="text" autocomplete="cc-number" id="cardNumber" name="cardNumber" required pattern="(?:\d ?){13,19}">
+            </br>
+            <label for="expiry date">expiry date</label>
+            <input type="month" autocomplete="cc-exp" id="expiryDate" name="expiryDate" min="2026-10">
+            </br>
+            <label for="cvv">cvv:</label>
+            <input type="password" autocomplete="cc-csc" name="cvv" required pattern="[0-9]{3,4}" maxlength="4">
+            </br>
+
+        </fieldset>
+    
+        
+        <input type="submit" value="Submit">
+        
+    </form>
 </body>
 
 </html>
