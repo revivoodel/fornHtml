@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form html</title>
+</head>
+
+<body>
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>user details</legend>
+            <label for="name">name</label>
+            <input type="text" id="name" required value="enter name" name="name">
+            <label for="age">age</label>
+            <input type="range" id="age" min="1" max="120" value="20" name="age">
+        </fieldset>
+<fieldset>
+            <legend>more</legend>
+            <label for="gender">מגדר</label>
+            <select name="gender">
+                <option value="M">male</option>
+                <option value="F">female</option>
+                <option value="E">else</option>
+            </select>
+   </fieldset> 
+        <input type="submit" value="sent">
+ </form>
+</body>
+
+</html>
